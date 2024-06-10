@@ -1,0 +1,36 @@
+!TESTE 1 #PIC
+#DESCRIÇÃO TESTE 1
+@number #numero1 #Teste numero 1
+@string #texto1 #Teste texto 1
+?sql 
+?injection 
+?numero1 
+?texto1
+
+!TESTE 2 #PIC
+#DESCRIÇÃO TESTE 2
+@string #texto2
+?sql injection texto2
+
+!TESTE 3 #SGP
+#DESCRIÇÃO TESTE 2
+@string #texto2
+?sql injection texto2
+
+!Não é possível desvincular a RC #PIC
+#Isso acontece pois a RC foi deletada dentro do ERP, 
+#para resolver isso devemos mudar o status da RC dentro do PIC para “Cancelada”. 
+@string #cd_rc #Código da RC para ser “Cancelada”
+?UPDATE TB_PEDIDO_ITEM_ARTE SET id_status = 16
+?SELECT * FROM TB_PEDIDO_ITEM_ARTE
+?WHERE id_pedido_item IN 
+?( SELECT id_pedido_item FROM TB_RC WHERE cd_oracle_requisition = cd_rc )
+
+!Alterar status de uma RC #PIC
+#RC está com status errado, seleciona status que deveria ser aplicado para a RC. 
+@string #cd_rc #Código da RC para ser “Cancelada”
+@select #rc-status #Novo status da RC #TB_STATUS_PEDIDO_ITEM_ARTE
+?UPDATE TB_PEDIDO_ITEM_ARTE SET id_status = 16
+?SELECT * FROM TB_PEDIDO_ITEM_ARTE
+?WHERE id_pedido_item IN 
+?( SELECT id_pedido_item FROM TB_RC WHERE cd_oracle_requisition = cd_rc rc-status )
