@@ -1,0 +1,86 @@
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    background-color: #f9f9f9
+  
+main 
+    position: fixed
+    display: flex
+    flex-direction: column
+    gap: 32px
+    justify-content: flex-start
+    align-items: center
+    height: 100%
+    width: 100%
+  
+
+input 
+    padding: 10px
+    border: 1px solid #ccc
+    border-radius: 5px
+    margin-right: 10px
+  
+    &:focus 
+        outline: none
+
+    &:hover 
+        cursor: pointer
+        background-color: #f9f9f9
+  
+
+button 
+    padding: 10px 20px
+    border: 1px solid #ccc
+    border-radius: 5px
+    background-color: #007bff
+    color: #fff
+    cursor: pointer
+
+    &:hover 
+        background-color: #0056b3
+
+.menu
+    display: flex
+    gap: 32px
+    justify-content: flex-start
+    align-items: flex-start
+    width: 100%
+    max-height: 90%
+    padding: 32px
+    background-color: #f9f9f9
+    border-radius: 5px
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+    flex: 1
+
+    &-programas
+        display: flex
+        flex-direction: column
+        gap: 16px
+        width: 300px
+        max-height: 100%
+        height: 100%
+        overflow-y: auto
+        padding: 16px
+        background-color: #fff
+        border-radius: 5px
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+
+    &-conteudo
+        display: flex
+        flex-direction: column
+        background: url('./../assets/bg.png') no-repeat center center, #fff
+        gap: 16px
+        width: 100%
+        height: 100%
+        overflow-y: auto
+        overflow-x: hidden
+        padding: 16px
+        border-radius: 5px
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+        flex: 1
+
+        &.remove-bg
+            background: #fff
+
+        

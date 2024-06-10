@@ -1,0 +1,105 @@
+body, html
+    height: 100%
+    overflow: hidden
+
+ul
+    list-style: none
+    padding: 16px
+    margin: 0
+
+button 
+    padding: 10px 20px
+    border: 1px solid #ccc
+    border-radius: 5px
+    background-color: #007bff
+    color: #fff
+    cursor: pointer
+
+    &:hover 
+        background-color: #0056b3
+
+.programa
+    padding: 10px
+    border-radius: 20px
+    cursor: pointer
+
+.programa:hover
+    background-color: rgba(0, 0, 0, 0.05)
+    backdrop-filter: blur(5px)
+    border-radius: 5px
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+
+.lista
+    display: none
+
+    &.show
+        display: block        
+
+.conteudo
+    cursor: pointer
+    padding: 5px
+    border-radius: 5px
+
+    &:hover
+        background-color: rgba(0, 0, 0, 0.05)
+        backdrop-filter: blur(5px)
+        border-radius: 5px
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+
+    &-titulo
+        font-size: 1.5em
+        font-weight: bold
+
+    &-descricao
+        font-size: 1.1em
+        text-align: justify
+
+    &-inputs
+        display: flex
+        flex-direction: column
+        gap: 8px
+        align-items: center
+        width: 100%
+        padding: 5px
+        margin: 5px 0
+
+    &-input
+        display: flex
+        gap: 16px
+        flex: 1 1 0px
+        width: 100%
+        align-items: center
+        // justify-content: center
+        width: 100%
+        padding: 5px
+        margin: 5px 0
+
+        & label
+            font-size: 1em
+            font-weight: bold
+
+        & input
+            padding: 5px
+            margin: 5px 0
+            border-radius: 5px
+            border: 1px solid #ccc
+
+    &-executar
+        margin-top: auto
+        padding: 10px
+        border-radius: 50px
+        cursor: pointer
+
+        text-align: center
+        background: #007bff
+
+        &:hover
+            background: #0096ff
+            backdrop-filter: blur(5px)
+            border-radius: 50px
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+
+        //disabled
+        &.disabled
+            background: #ccc
+            cursor: not-allowed
